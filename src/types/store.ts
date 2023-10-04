@@ -1,5 +1,8 @@
+import { sortModeTypes } from "./sortBlendFunctionTypes";
+
 export interface globalStateType {
-    selected: string
+    selected: string,
+    sortMode: sortModeTypes
 }
 
 export interface ActionType {
@@ -8,7 +11,8 @@ export interface ActionType {
 }
 
 export enum ActionsList {
-    "PIXEL_SELECTED" = "PIXEL_SELECTED"
+    "PIXEL_SELECTED" = "PIXEL_SELECTED",
+    "CHANGE_SORTMODE" = "CHANGE_SORTMODE"
 }
 
 export type Observer = HTMLElement & { render: () => void}

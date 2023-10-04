@@ -1,9 +1,11 @@
 import { globalStateType, ActionType, ActionsList, Observer } from "../types/store"
 import { reducer } from "./reducer"
+import { sortModeTypes } from "../types/sortBlendFunctionTypes"
 
 
 export let globalState: globalStateType = {
-    selected: ""
+    selected: "",
+    sortMode: sortModeTypes.Radial
 }
 
 const observers: Observer[] = []

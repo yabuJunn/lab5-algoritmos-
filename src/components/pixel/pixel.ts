@@ -49,16 +49,7 @@ export class Pixel extends HTMLElement {
         //Creation of pixel
         const pixel = this.ownerDocument.createElement("div")
         pixel.classList.add("pixel")
-
-        if (parseInt(globalState.selected) === parseInt(this.properties.id)) {
-            console.log("Es rojo")
-            pixel.classList.remove("pixelWithe")
-            pixel.classList.add("pixelRed")
-        } else {
-            console.log("Es blanco")
-            pixel.classList.remove("pixelRed")
-            pixel.classList.add("pixelWhite")
-        }
+        pixel.style.backgroundColor = `#${this.properties.color}`
         //Adding childs of this.shadowRoot
         this.shadowRoot?.appendChild(link)
         this.shadowRoot?.appendChild(pixel)

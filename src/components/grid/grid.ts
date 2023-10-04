@@ -1,5 +1,6 @@
 import "../export"
 import { globalState, addObserver } from "../../store/index";
+import { sortBlendFunction } from "../../sortBlendFunction";
 
 const enum BoardGridProperties {
     grid = "grid"
@@ -46,16 +47,24 @@ export class BoardGrid extends HTMLElement {
             const pixelContainer = this.ownerDocument.createElement("div")
             pixelContainer.classList.add("gridContainer")
             //Creation of childs
-            for (let i = 0; i < parseInt(this.properties.grid); i++) {
-                const pixel = this.ownerDocument.createElement("grid-pixel")
-                pixel.setAttribute("id", `${i}`)
-                if (parseInt(globalState.selected) === i) {
-                    pixel.setAttribute("color", "red")
-                } else {
-                    pixel.setAttribute("color", "white")
-                }
-                pixelContainer.appendChild(pixel)
-            }
+
+            // for (let i = 0; i < parseInt(this.properties.grid); i++) {
+            //     const pixel = this.ownerDocument.createElement("grid-pixel")
+            //     pixel.setAttribute("id", `${i}`)
+            //     if (parseInt(globalState.selected) === i) {
+            //         pixel.setAttribute("color", "red")
+            //     } else {
+            //         pixel.setAttribute("color", "white")
+            //     }
+            //     pixelContainer.appendChild(pixel)
+            // }
+
+            const pixels = sortBlendFunction(globalState.sortMode, globalState.selected)
+            pixels?.map((element) => {
+                pixelContainer.appendChild(element)
+            })
+            
+
             //Adding childs of this.shadowRoot
             this.shadowRoot?.appendChild(link)
             this.shadowRoot?.appendChild(pixelContainer)
