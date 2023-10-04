@@ -2,7 +2,7 @@ import { sortModeTypes } from "./sortBlendFunctionTypes";
 
 export interface globalStateType {
     selected: string,
-    sortMode: sortModeTypes
+    sortMode: string | sortModeTypes
 }
 
 export interface ActionType {

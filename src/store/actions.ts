@@ -6,3 +6,10 @@ export const changeSelected = (payload: string): ActionType => {
         payload
     }
 }
+
+export const changeSortMode = (payload: string): ActionType => {
+    return {
+        type: ActionsList.CHANGE_SORTMODE,
+        payload
+    }
+}

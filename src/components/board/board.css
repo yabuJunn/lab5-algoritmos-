@@ -2,4 +2,9 @@
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+   
+}
+
+board-board{ 
+    height: fit-content;
 }

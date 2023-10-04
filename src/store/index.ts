@@ -5,7 +5,7 @@ import { sortModeTypes } from "../types/sortBlendFunctionTypes"
 
 export let globalState: globalStateType = {
     selected: "",
-    sortMode: sortModeTypes.Radial
+    sortMode: "Radial"
 }
 
 const observers: Observer[] = []

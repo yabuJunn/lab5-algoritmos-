@@ -1,0 +1,21 @@
+.modeButton {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeButtonSelected {
+    background-color: aquamarine;
+}
+
+.modeButton img {
+    width: 70px;
+}
+
+.modeButton p {
+    margin: 0;
+}

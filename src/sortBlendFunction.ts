@@ -2,7 +2,7 @@ import { sortModeTypes } from "./types/sortBlendFunctionTypes"
 import "./components/export"
 import { Pixel } from "./components/export"
 
-export const sortBlendFunction = (sortMode: sortModeTypes, selected: string) => {
+export const sortBlendFunction = (sortMode: sortModeTypes | string, selected: string) => {
     const blendArray: Array<HTMLElement> = []
     if (sortMode === sortModeTypes.Radial) {
         for (let i = 0; i < 100; i++) {
